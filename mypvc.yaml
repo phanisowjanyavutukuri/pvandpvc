@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  
+  labels:
+    app: myjenkins
+    chart: jenkins-0.30.0
+    heritage: Tiller
+    release: myjenkins
+  name: myjenkins
+  namespace: jenkins
+  
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  volumeName: mypv
+
